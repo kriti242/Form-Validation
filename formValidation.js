@@ -94,9 +94,11 @@ function matchPassword() {
 function ValidateForm() {
     if(firstN.value == "" || lastN.value == "" || email.value == "" || phone.value == "" || userID.value == "" || password.value =="" || confirm_password.value == "") {
         alert("Registration form fields cannot be blank. \nKindly fill all the form fields!");
+        return false;
     }
     else {
         document.getElementById("form_id").submit(); //form submission
         alert("Registered Successfully...... \n\nCourses For ALL welcomes " + firstN.value + " " + lastN.value );
+        return true;
     }
 }
